@@ -1,0 +1,37 @@
+<div class="Delicato-nav-bar" [ngClass]="{'overlay':menuFlag}">
+    <div class="top-banner">
+      <div class="banner-top">
+            <div class="DV-Logo">
+                    <img class="Delicato-logo" src="assets/images/Logo.jpg" width="80px" height="60px" alt="Logo" />
+                  </div>
+        <div class="nav-menu">
+          <ul class="menu-items">
+            <!-- <li class="menu-item" *ngFor="let list of menuList;let i=index" (click)="gotoLocation(list)"> -->
+              <p class="menu-item-names" *ngIf="getLoginStatus()" (click)="gotoLocation('LOGIN')" style="cursor:pointer">LOGOUT</p>
+            <!-- </li> -->
+          </ul>
+          <div class="mobile-nav">
+            <i class="fa fa-bars" aria-hidden="true" (click)="menuFlag=!menuFlag;searchFlag=false;selectNav=''" [ngClass]="{'menu-btn-search-active':menuFlag&&searchFlag,'menu-btn-active':menuFlag&&!searchFlag,'menu-icon':!menuFlag}"></i>
+            <div id="mySidenav" class="sidenav" [ngClass]="{'menu-active':menuFlag, 'menu-inactive':!menuFlag}">
+              <ul class="mobile-menu-items">
+                <li class="mobile-menu-item" *ngFor="let list of menuList;let i=index" [ngClass]="{'menu-list-active':selectNav==list}" (click)="selectNav=list;gotoLocation(list)">
+                  {{list}}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="search-box">
+            <div [ngClass]="{'ver-line-active':searchFlag,'ver-line-inactive':!searchFlag,'ver-line':subMenuFlag}"></div>
+            <div class="sa" *ngIf="searchFlag">
+              <input type="text" [ngClass]="{'text-active-sidenav':menuFlag}" class="text-box">
+            </div>
+            <img [ngClass]="{'black-search-inactive':!menuFlag,'black-search-active':menuFlag}" class="search-img" src="assets/icons/svg/svg/magnifying-glass.svg"
+              width="25px" height="20px" alt="search" (click)="searchFlag=!searchFlag" />
+            <img [ngClass]="{'green-search-inactive':menuFlag,'green-search-active':!menuFlag}" class="search-img" src="assets/icons/svg/svg/magnifying-glass.svg"
+              width="25px" height="20px" alt="search" (click)="searchFlag=!searchFlag" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

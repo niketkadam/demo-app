@@ -1,0 +1,379 @@
+$color_1: #ffffff;
+$color_2: white;
+$color_3: #7f7f7f;
+$color_4: #fff;
+$color_5: #696666;
+$color_6: #8c8b92;
+$font_family_1: Eras Light ITC Regular;
+$font_family_2: 'Glyphicons Halflings';
+$background_color_1: #444444;
+$background_color_2: #282828;
+$background_color_3: #e7e7e7;
+$background_color_4: #ffffff;
+$background_color_5: #3b3b3b;
+$background_color_6: #000000;
+$background_color_7: #404040;
+$background_color_8: #7f7f7f;
+$background_color_9: #444;
+
+.top-banner{	
+	font-family: Trebuchet MS;
+	color: #9ec48e;
+}
+
+.body {
+      margin:0;
+    
+}
+
+th{
+	font-size: 12px;
+}
+
+.banner-top {
+	border: 1px solid #3b788a;
+	width: 100%;
+	background:#3b788a;
+}
+
+.DV-Logo{
+	margin: 10px 0px 10px 7px;	
+}
+
+.Delicato-logo{
+	border-radius: 4px;
+    border: 1px solid #ffffff;
+}
+
+.nav-menu{	
+	float: right;
+	display: flex;
+    margin: -50px 0px -100px 0px;	
+}
+
+.menu-items{
+	list-style: none;	
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+}
+
+.menu-item{
+	color:#ccc;
+	padding: 0px 2px;
+	cursor: pointer;
+	margin-bottom: 0;	
+}
+
+.menu-item-names{
+	color: #ccc;
+	padding: 0 10px;
+	margin-bottom: 0;	
+	font-size: 12px;
+}
+
+.menu-item-names-inactive{
+	&:hover{
+		color: #fff;
+		background-color: #15560a;
+		height: 83px;
+		top: -34px;
+		position: relative;
+		padding-top: 34px;
+	}
+}
+
+.menu-item-names-active{
+	&:hover{
+		color: #fff;
+		background-color: #15560a;
+		height: 59px;
+		top: -34px;
+		position: relative;
+		padding-top: 34px;
+	}
+}
+
+.overlay{
+	position:absolute;
+	width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dropdown-menu.show {
+	 left: -15px !important;
+	height: 120px;
+    background-color:white;
+    display: block;
+}
+
+.dropdown-item{
+	padding: .25rem 1.5rem;
+	font-size:11px;
+}
+
+.dropdown-toggle::after {
+    display:none;
+    width: 0;
+    height: 0;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+}
+
+
+.menu-list-active{
+	color: #fff;
+}
+
+.menu-item-active{
+	color: #fff;
+    background-color: #15560a;
+    height: 60px;
+    top: -30px;
+    position: relative;
+    margin: -4px 0 0 0;
+	padding-top: 34px;
+	&:hover{
+		color: #fff;
+		background-color: #15560a;
+		height: 59px;
+		top: -30px;
+		position: relative;
+		padding-top: 34px;
+	}	
+}
+
+.green-search-inactive{
+	display: none;
+	transition: 0.8s;
+}
+
+.green-search-active{
+	display: block;
+	transition: 0s;
+}
+
+.black-search-inactive{
+	display: none;
+	transition: 0s;
+}
+
+.black-search-active{
+	display: block;
+	transition: 0.8s;
+}
+
+.search-box{
+	display: flex;
+	color: #9ec48e;
+	margin: 3px 10px 0 15px;
+}
+
+.ver-line-active{
+	border-left: 1px solid #9ec48e;	
+	margin: -33px 15px -11px -4px;
+	height: 80px;
+}
+
+.ver-line-inactive{
+	border-left: 1px solid #9ec48e;	
+	margin: -33px 15px -11px -4px;
+	height: 80px;
+}
+
+.ver-line{
+	margin: -33px 15px 13px -4px;
+	height: 80px;
+}
+
+.search-icon{
+	z-index: 1;
+	margin: 0px 15px 0 10px;
+	cursor: pointer;
+	&:hover{
+		color: #ffffff;
+	}
+}
+
+
+.text-box{
+	z-index: 1;
+	position: relative;
+    top: -6px;
+    border-radius: 4px;
+	background-color: #e2f0d9;
+	color: black;
+	border: 1px solid #e2f0d9;
+	margin: 0px 0px 0px 0px;
+	&:focus{		
+		outline: none;
+	}
+}
+
+.fa{
+	cursor: pointer;
+}
+
+.search-img{
+	cursor: pointer;
+	position: relative;
+	top: -2px;	
+	margin: 0 5px 0 4px;
+	z-index: 1;
+	transition: 0.8s;
+}
+
+.mobile-menu-items{
+	list-style: none;
+	cursor: pointer;
+	margin: 15px 0 0 4px;
+}
+
+.mobile-menu-item{
+	font-size: 15px;
+	color: #9ec48e;
+	margin-bottom: 5px;
+}
+
+.mobile-sub-menu{
+	list-style: none;
+	cursor: pointer;
+}
+
+.sub-menu{
+	margin: -18px 20px 0 0;
+	cursor: pointer;
+}
+
+/*.sub-menu1, .sub-menu2{
+	list-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	display: -webkit-box;
+	float: right;
+	cursor: pointer;	
+	font-size: 11px;
+}*/
+
+.sub-menu1-inactive,.sub-menu1-active,.sub-menu2-inactive,.sub-menu2-active{	
+	list-style: none;
+	color: #ffffff;
+	cursor: pointer;
+	display: -moz-box;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	float: right;
+	cursor: pointer;	
+	font-size: 11px;
+}
+.sub-menu1-inactive{	
+	margin: -11px 66px 0 0;	
+}
+
+.sub-menu1-active{	
+	margin: -11px 235px 0 0;
+}
+
+.sub-menu2-inactive{	
+	margin: -11px 346px 0 0;
+}
+
+.sub-menu2-active{	
+	margin: -11px 520px 0 0;
+}
+
+.text-active-sidenav{
+	width: 168px;
+}
+
+.sub-menu-bg{
+	width: 100%;
+    background: #15560a;
+    height: 24px;
+    margin: -26px 0 10px 0;
+}
+
+.down-menu-icon{
+	font-size: 9px;
+    position: relative;
+	top: -2px;
+	left: 2px;
+}
+
+@media (min-width: 1100px) {
+	.mobile-nav{
+		display: none;
+	}
+}
+
+
+@media (max-width: 1099px) {	
+	.menu-items{
+		display: none;
+	}
+	.sidenav {
+		height: 100%; /* 100% Full-height */
+		width: 0; /* 0 width - change this with JavaScript */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Stay on top */
+		top: 0;
+		right: 0;
+		background-color: black; /* Black*/
+		overflow-x: hidden; /* Disable horizontal scroll */
+		padding-top: 60px; /* Place content 60px from the top */
+		transition: 0.8s; /* 0.5 second transition effect to slide in the sidenav */
+		position: absolute;
+		font-size: 36px;
+	}
+
+	.menu-active{
+		width: 250px;
+	}	
+	
+	.menu-btn-search-active{
+		margin: 0 22px 0 0;				
+	}
+	.menu-btn-active{
+		margin: 0 190px 0 0;	
+		/*transition: 0.8s;*/
+	}
+
+	.menu-inactive{
+		width: 0;
+	}
+	.menu-icon{
+		margin: 0 5px 0 0;
+	}
+	.ver-line-active{
+		border-left: 1px solid #8ab67b;	
+		margin: -33px 15px -24px -4px;
+		height: 80px;
+	}
+	.ver-line-inactive{
+		border-left: 1px solid #8ab67b;	
+		margin: -33px 15px -31px -4px;
+		height: 80px;
+	}
+	.sub-menu-bg{
+		display: none;
+	}
+	.sub-menu,.sub-menu1,.sub-menu2{
+		display: none;
+	}
+}
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+

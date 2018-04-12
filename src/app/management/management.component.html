@@ -1,0 +1,164 @@
+<div class="main-content" id="main-con">
+  <div class="breadcrump" id="bread">
+    <label class="breadcrump-name" *ngIf="btnVal==1" id="bread-name">CONTRACTS</label>
+    <label class="breadcrump-name"*ngIf="btnVal==2" id="bread-name">QA SPECIFICATIONS</label>
+    <label class="breadcrump-name"*ngIf="btnVal==3" id="bread-name">PROCESS-STEP</label>
+    <hr class="hori-line" id="hor-line">
+  </div>
+  <div class="panel panel-default section-content">
+    <div class="panel-body table-sec-2">
+      <div class="crush-section row">
+        <div class="col col-lg-5 col-md-5 col-sm-5 col-xs-5">
+          <select id="BarrelsList" class="crushharvest-text" [(ngModel)]="type" (ngModelChange)="onSelect(type)" style="margin-top:2.5px;background-color:#3b788a;color:white;">
+            <option *ngFor="let item of types" value="{{item}}">{{item}}</option>
+          </select>
+        </div>
+        <div class="col col-lg-7 col-md-7 col-sm-7 col-xs-7">
+          <button class="btn btn-default" style="min-width:75px;margin-top:-5px;" id="prev-btn" (click)="goPrev()" [disabled]="btnVal==1">{{prevBtn}}</button>
+          <button class="button button1" *ngFor="let item of buttons;let i=index;" (click)="selectBtn(item)" [ngClass]="{'active-btn': btnVal == item}"
+            style="outline:none" placement="top">{{item}}</button>
+          <button class="btn btn-default" style="min-width:75px;margin-top:-5px;" id="next-btn" (click)="goNext()" [disabled]="btnVal==3">{{nextBtn}}</button>
+        </div>
+      </div>
+      <input [(ngModel)]="searchText" class="crushharvest-text" placeholder="search text goes here">
+
+      <div class="crush-table-content">
+        <div class="outer-container">
+          <div class="inner-container">
+            <div class="table-header" id="headerdiv">
+            </div>
+            <div class="custom-scrollbar" style="overflow: auto; min-width: 100px;" onscroll="document.getElementById('headerdiv').scrollLeft = this.scrollLeft;">
+              <table *ngIf="btnVal==1" id="bodytable" width="100%" cellpadding="0" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th *ngFor="let header of headerControl;let i=index" class="barrel-header">
+                      <span>{{header}}</span>
+                    </th>
+                  </tr>
+                </thead>
+                <div>
+                  <tr *ngFor="let rowData of contractData | filter : searchText;let i=index;" [ngClass]="{'col-blue' : i%2==0,'col-white': i%2!=0}">
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.company" (ngModelChange)="onChange()" [readonly]="!editFlag" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.plant" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.vintage" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.baseLotDesc" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.crushProgrameName" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.ava" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.variety" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.comment" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                  </tr>
+                </div>
+              </table>
+              <table *ngIf="btnVal==2" id="bodytable" width="100%" cellpadding="0" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th *ngFor="let header of headerControl1;let i=index" class="barrel-header">
+                      <span>{{header}}</span>
+                    </th>
+                  </tr>
+                </thead>
+                <div>
+                  <tr *ngFor="let rowData of tankData;let i=index;" [ngClass]="{'col-blue' : i%2==0,'col-white': i%2!=0}">
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.warehouse" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.wipCount" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.Status" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.startCountDate" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.toast" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                  </tr>
+                </div>
+              </table>
+              <table *ngIf="btnVal==3" id="bodytable" width="100%" cellpadding="0" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th *ngFor="let header of headerControl2;let i=index" class="barrel-header">
+                      <span>{{header}}</span>
+                    </th>
+                  </tr>
+                </thead>
+                <div>
+                  <tr *ngFor="let rowData of tankData;let i=index;" [ngClass]="{'col-blue' : i%2==0,'col-white': i%2!=0}">
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.warehouse" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.wipCount" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.Status" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                    <td class="body-cells-2">
+                      <input type="text" [(ngModel)]="rowData.startCountDate" [readonly]="!editFlag" (ngModelChange)="onChange()" class="table-input">
+                    </td>
+                  </tr>
+                </div>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-2">
+        <div class="shows">
+          <span>ESTIMATED TON</span>
+          <input type="text" class="box">
+          <span>+TBD TONS</span>
+          <input type="text" class="box">
+          <span>= TOTAL TONS</span>
+          <input type="text" class="box">
+          <span>JUICE YIELD</span>
+          <input type="text" class="box">
+          <span>ESTIMATED GALLONS</span>
+          <input type="text" class="box">
+          <span>ICE YIELD VARIETY: Standard Deafault</span>
+        </div>
+      </div>
+      <div>
+      <button *ngIf="!editFlag" class="btn btn-lg cert-btn" (click)="onEdit()">EDIT
+      </button>
+      <button *ngIf="editFlag" class="btn btn-lg cert-btn" (click)="onCancel(content);">CANCEL
+      </button>
+      <button class="btn btn-lg cert-btn"[disabled]="!editFlag" (click)="onSave(content)">SAVE
+      </button>
+    </div>
+    </div>
+    
+  </div>
+
+</div>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Do you want to save your's changes?</h4>  
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-lg cert-btn"[disabled]="!editFlag" (click)="onYes();c('Close click');">YES
+    </button>
+    <button class="btn btn-lg cert-btn" (click)="c('Close click');onClose()">NO
+    </button>
+  </div>
+</ng-template>

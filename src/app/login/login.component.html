@@ -1,0 +1,28 @@
+<div class="modal-dialog">
+    <div class="loginmodal-container">
+      <h1>Login to Your Account</h1>
+      <br>
+      <form [formGroup]="userForm" (ngSubmit)="submitForm(userForm.value)">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="UserID" #userId='ngForm' name="userId" [formControl]="userForm.controls['userId']" pattern="[a-zA-Z0-9_]*">
+        </div>
+        <div class='error' *ngIf="userId.control.hasError('pattern')">Please Follow the pattern</div>
+
+        <div class="form-group">
+          <input class="form-control" type="password" id="userPwd" #userPin='ngForm' name="userPin" placeholder="PIN" [formControl]="userForm.controls['userPin']">
+        </div>
+        <div class='error' [hidden]="!userPin.hasError('minlength')">
+          UserPin can not be shorter than 4 characters.
+        </div>
+        <div class='error' [hidden]="!userPin.hasError('maxlength')">
+          UserPin can not be greater than 6 characters.
+        </div>
+        <div class='error' *ngIf="userPin.control.dirty && userPin.control.hasError('minNumber')" >
+          Only Numeric Value is allowed
+        </div>
+        <input type="submit" id="userLogin" name="login" [disabled]="!userForm.valid" class="login loginmodal-submit" value="Login">
+      </form>
+  
+    </div>
+  </div>
+  

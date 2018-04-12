@@ -1,0 +1,7 @@
+{
+  "baseSettings": {
+    "BaseServiceUrl": "http://dv-dev.delicato.com/barreltracking/",
+    "BarrelTrackingServiceUrl": "api/v1/",
+    "SharedServiceUrl": "api/v1/"
+  }
+}

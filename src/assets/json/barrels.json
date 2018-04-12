@@ -1,0 +1,114 @@
+{
+    "dataModel": [
+        {
+            "company": "BBSM",
+            "plant": 0,
+            "vintage": "Not Started",
+            "baseLotDesc": "Lot Description",
+            "crushProgrameName": "Crush1",
+            "ava":"jom",
+            "variety":12,
+            "comment":"good"
+        },
+        {
+            "company": "BBSBUN",
+            "plant": 12,
+            "vintage": "Started",
+            "baseLotDesc": "Lot Description",
+            "crushProgrameName": "Crush2",
+            "ava":"jomesh",
+            "variety":16,
+            "comment":" very good"
+        }
+        ,
+        {
+            "company": "ASM",
+            "plant": 20,
+            "vintage": "Not Started",
+            "baseLotDesc": "Lot Descriptions",
+            "crushProgrameName": "Crush3",
+            "ava":"niks",
+            "variety":15,
+            "comment":"23"
+        }
+        ,
+        {
+            "company": "hig",
+            "plant": 0,
+            "vintage": "Not Started",
+            "baseLotDesc": "Lot Description",
+            "crushProgrameName": "Crush15",
+            "ava":"ask",
+            "variety":52,
+            "comment":"nice"
+        },
+        
+        {
+            "company": "DV",
+            "plant": 23,
+            "vintage": "ACTIVE",
+            "baseLotDesc": "Lot Description",
+            "crushProgrameName": "Crush45",
+            "ava":"SNT",
+            "variety":12,
+            "comment":"NICE"
+        },
+        {
+            "company": "DV",
+            "plant": 23,
+            "vintage": "ACTIVE",
+            "baseLotDesc": "Lot Description",
+            "crushProgrameName": "Crush45",
+            "ava":"SNT",
+            "variety":12,
+            "comment":"NICE"
+        },
+        {
+            "company": "DV",
+            "plant": 23,
+            "vintage": "ACTIVE",
+            "baseLotDesc": "Lot Description",
+            "crushProgrameName": "Crush45",
+            "ava":"SNT",
+            "variety":12,
+            "comment":"NICE"
+        }    
+    ],
+
+    "dataModel1":[ {
+        "warehouse": "BBSM",
+        "wipCount": 0,
+        "Status": "Not Started",
+        "startCountDate": "12-jan-2017 9:30AM",
+        "toast": "Toast1"
+    },
+    {
+        "warehouse": "BBSM",
+        "wipCount": 0,
+        "Status": "Not Started",
+        "startCountDate": "12-jan-2017 9:30AM",
+        "toast": "Toast2"
+    },
+    {
+        "warehouse": "BBSM",
+        "wipCount": 0,
+        "Status": "Not Started",
+        "startCountDate": "12-jan-2017 9:30AM",
+        "toast": "Toast2"
+    },
+    {
+        "warehouse": "BBSM",
+        "wipCount": 0,
+        "Status": "Not Started",
+        "startCountDate": "12-jan-2017 9:30AM",
+        "toast": "Toast2"
+    },
+    {
+        "warehouse": "BBSM",
+        "wipCount": 0,
+        "Status": "Not Started",
+        "startCountDate": "12-jan-2017 9:30AM",
+        "toast": "Toast2"
+    }
+]
+}
